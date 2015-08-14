@@ -6,10 +6,10 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
   var fs = require('fs')
-  var html = fs.readFileSync("index.html")
-  var htm = new Buffer(htm)
-  var ht = htm.toString()
-  response.send(ht)
+  var html = fs.readFileSync("index.html").toString()
+  // var htm = new Buffer(htm)
+  //var ht = htm.toString()
+  response.send(html)
   //response.send("hello world, i guess")
 })
 
